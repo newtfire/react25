@@ -7,11 +7,12 @@
     color: black;
 }
 
-.App {
-    background:rgb(0, 55, 55);
+.Newts {
+
     display: flex;
 }
-figure.homeNewt {
+
+figure.homeNewt, figure.imageShow {
     background-image: radial-gradient(circle, indianred, teal);
     border-radius: 50%;
 
@@ -19,5 +20,10 @@ figure.homeNewt {
 
 figure.homeNewt img {
     max-width: 300px;
+    width: 100%;
 
+}
+figure.imageShow img {
+    max-width: 300px;
+    width:100%;
 }

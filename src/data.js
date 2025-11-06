@@ -6,13 +6,12 @@ import _circuitry_nightcafe from './assets/circuitry-nightcafe.jpg'
 import _codingtube from './assets/codingtube.jpg'
 import _cragsidSpark_cropped from './assets/cragsidSpark-cropped.jpg'
 import _jacquard_loom_card from './assets/jacquard-loom-card.jpg'
-import _langMetropolis from './assets/langMetropolis.jpg'
 import _puffin_habitat from './assets/puffin-habitat.jpg'
 import _puffin1 from './assets/puffin1.jpg'
 import _puffin2_outsidehomes from './assets/puffin2-outsidehomes.jpg'
 import _spiritedAwayNightScene from './assets/spiritedAwayNightScene.jpg'
 import _warofworldswordcloud from './assets/warofworldswordcloud.png'
-export const imageData = [{
+export const Gallery = [{
     id: 0,
     name: 'bagpipes',
     kind: 'music',

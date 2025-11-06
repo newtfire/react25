@@ -1,6 +1,8 @@
 import {useState} from "react";
 import './App.css'
 import Newt from './components/Newt/Newt.jsx'
+import Image from './components/Images/Images.jsx'
+import {Gallery} from './data.js'
 
 /* The plan:
 
@@ -15,29 +17,31 @@ function App() {
 
 const [rotate, setRotate] = useState(0);
 const [index, setIndex] = useState(0);
+const [imIndex, setImIndex] = useState(0);
+
 
 const newtClick = () => {
     setRotate(rotate + 30);
-    console.log('What is the rotation value? ' + rotate);
     setIndex(index + 1);
-    console.log('What is the index value?' + index);
-
+    setImIndex((imIndex + 1) % Gallery.length);
 }
-
+const currentImage = Gallery[imIndex]
   return (
     <>
-        <div className="App" style={{background: `rgb(${index * 5}, 55, 55)`}}>
+        <div className="Newts" style={{background: `rgb(${index * 5}, 55, 55)`}}>
             <Newt style={{transform: `rotate(${rotate}deg)`}}/>
 
-            <Newt style={{transform: `rotate(${-rotate}deg)`}}/>
+            <Image pic={currentImage}/>
 
+            <Newt style={{transform: `rotate(${-rotate}deg)`}}/>
         </div>
         <button onClick = {newtClick} type="button">
-            click to turn the newt
+            click to turn the newts and change the picture
         </button>
-
+        <p>What is Gallery length? {Gallery.length}</p>
         <p>The rotation value is now {rotate} degrees.</p>
         <p>The index value is now {index}.</p>
+        <p>The imIndex value is now {imIndex}</p>
     </>
   )
 }

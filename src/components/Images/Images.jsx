@@ -1,10 +1,8 @@
-import {imageData} from "./data.js"
-
-export default function homeImage({style})  {
+export default function HomeImage({pic, style})  {
     return (
-        <figure key={imageData.id} style={style} className='imageShow'>
-            <img src={imageData.src} alt={imageData.name}/>
-            <figcaption>{imageData.note}</figcaption>
+        <figure key={pic.id} style={style} className='imageShow'>
+            <img src={pic.src} alt={pic.note}/>
+            <figcaption>{pic.name}: {pic.note}</figcaption>
         </figure>
     );
 };
