@@ -1,12 +1,10 @@
 import newt from "../../assets/newt-mosaic4.png";
 
-const homeNewt = () => {
+export default function homeNewt({style})  {
     return (
-        <figure className='homeNewt'>
+        <figure style={style} className='homeNewt'>
             <img src={newt} alt={"firebelly newt home icon"}/>
-            <figcaption>Clickable Newt</figcaption>
+            <figcaption>abstract mosaic of a firebelly newt</figcaption>
         </figure>
     );
 };
-
-export default homeNewt;

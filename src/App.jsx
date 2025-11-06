@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useState} from "react";
 import './App.css'
 import Newt from './components/Newt/Newt.jsx'
 
@@ -13,10 +13,26 @@ revealed.
 
 function App() {
 
+const [rotate, setRotate] = useState(0);
+
+const newtClick = () => {
+    setRotate(rotate + 30);
+    console.log('What is the rotation value? ' + rotate);
+
+}
+
   return (
     <>
 
-        <Newt />
+        <Newt style={{transform: `rotate(${rotate}deg)`}}/>
+
+        <button onClick = {newtClick} type="button">
+            click to turn the newt
+        </button>
+
+
+
+        <p>The rotation value is now {rotate} degrees.</p>
     </>
   )
 }
