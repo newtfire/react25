@@ -4,6 +4,17 @@
   padding: 5em;
   text-align: center;
     background: mediumslateblue;
+    color: black;
 }
 
 
+figure.homeNewt {
+    background-image: radial-gradient(circle, indianred, teal);
+    border-radius: 50%;
+
+}
+
+figure.homeNewt img {
+    max-width: 300px;
+
+}
