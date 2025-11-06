@@ -7,7 +7,10 @@
     color: black;
 }
 
-
+.App {
+    background:rgb(0, 55, 55);
+    display: flex;
+}
 figure.homeNewt {
     background-image: radial-gradient(circle, indianred, teal);
     border-radius: 50%;
