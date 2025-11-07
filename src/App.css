@@ -1,29 +1,35 @@
 #root {
   /*max-width: 1280px;*/
-  margin: 0 auto;
+  width: 100%;
   padding: 5em;
   text-align: center;
     background: mediumslateblue;
     color: black;
 }
 
-.Newts {
-
+div.Newts {
     display: flex;
+    width:50%;
+    margin:auto;
+
 }
 
-figure.homeNewt, figure.imageShow {
+
+figure.homeNewt {
     background-image: radial-gradient(circle, indianred, teal);
     border-radius: 50%;
 
+
 }
+
 
 figure.homeNewt img {
     max-width: 300px;
-    width: 100%;
+    width:100%;
+
 
 }
 figure.imageShow img {
-    max-width: 300px;
-    width:100%;
+    max-height: 500px;
+    height:100%;
 }
