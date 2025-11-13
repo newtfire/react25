@@ -13,16 +13,16 @@ function List({selectedKind}) {
         pic.kind === 'electric art'
     );*/
     return (
-        <ul>
+        <section className={"gallery"}>
             {filtered.map(pic => (
-                <li key={pic.id}>
+                <figure key={pic.id}>
                     <img src={pic.src} alt={pic.name}/>
-                    <p>
+                    <figcaption>
                         <span className="strong">{pic.name}:</span>{pic.note}
-                    </p>
-                </li>
+                    </figcaption>
+                </figure>
             ))}
-                </ul>);
+                </section>);
             }
 
 function Selector() {
@@ -42,7 +42,7 @@ function Selector() {
             /* Here I'm applying React's useState, with the usual variable and setVariable construction */
     return (
         <>
-            <div>
+            <div className={"selectionBar"}>
                 {kinds.map(kind => (
                     <label key={kind}>
                         <input
@@ -69,13 +69,6 @@ function Selector() {
 const Gallery = () => {
     return (
         <div>
-            <h1>We are. . . </h1>
-            <ul>
-                <li><a href="https://behrend.psu.edu/">Penn State Behrend</a></li>
-                <li><a href="https://digit-psb.github.io/DIGIT/">DIGIT: Digital Media, Arts, and Technology</a></li>
-                <li><a href="https://newtfire.org">Newtfire</a></li>
-            </ul>
-
             <h1>Check out the galleries!</h1>
             <>
                 <Selector />
