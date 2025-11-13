@@ -1,8 +1,11 @@
 import {useState} from "react";
+import {BrowserRouter, Routes, Route, NavLink, Link} from 'react-router-dom'
+import styled from 'styled-components'
+/* ebb: I had to npm install styled-components for this. Thinking about how it's different
+* from applying the styling in CSS. I think this is intended for applying CSS to JSX.*/
 import './App.css'
-import Newt from './components/Newt/Newt.jsx'
-import Image from './components/Images/Images.jsx'
-import {Gallery} from './data.js'
+import Home from './components/Home/Home.jsx';
+import Gallery from './components/Gallery/Gallery.jsx'
 
 /* The plan:
 
@@ -15,32 +18,29 @@ revealed.
 
 function App() {
 
-const [rotate, setRotate] = useState(0);
-const [index, setIndex] = useState(0);
-const [imIndex, setImIndex] = useState(0);
 
+const StyledLink = styled(NavLink)`
+  color: lavenderblush;
+    padding-right: 2em;
+    &.active {
+        font-weight: bold;
+        color: yellowgreen;
+    }`;
 
-const newtClick = () => {
-    setRotate(rotate + 30);
-    setIndex(index + 1);
-    setImIndex((imIndex + 1) % Gallery.length);
-}
-const currentImage = Gallery[imIndex]
   return (
     <>
-        <div className="Newts" style={{background: `rgb(${index * 5}, 55, 55)`}}>
-            <Newt style={{transform: `rotate(${rotate}deg)`}}/>
-            <Newt style={{transform: `rotate(${-rotate}deg)`}}/>
-        </div>
-        <div className="Pictures">
-        <button onClick = {newtClick} type="button">
-            click to turn the newts and change the picture
-        </button>
-         <Image pic={currentImage}/>
-        </div>
-        <p>The rotation value is now {rotate} degrees.</p>
-        <p>The index value is now {index}.</p>
-        <p>The imIndex value is now {imIndex}</p>
+        <BrowserRouter>
+            <nav>
+                <StyledLink to={"/react25/"}>Home</StyledLink>
+                <StyledLink to={"/react25/gallery"}>Gallery</StyledLink>
+            </nav>
+            <Routes>
+                <Route path={"/react25/"} element={<Home />}>Home</Route>
+                <Route path={"/react25/gallery"} element={<Gallery />} />
+            </Routes>
+        </BrowserRouter>
+
+
     </>
   )
 }

@@ -19,7 +19,6 @@ figure.homeNewt {
     background-image: radial-gradient(circle, indianred, teal);
     border-radius: 50%;
 
-
 }
 
 
@@ -32,4 +31,10 @@ figure.homeNewt img {
 figure.imageShow img {
     max-height: 500px;
     height:100%;
+}
+
+span.strong {
+    font-weight: bold;
+    padding-right: 1em;
+    color: indianred;
 }

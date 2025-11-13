@@ -11,7 +11,7 @@ import _puffin1 from './assets/puffin1.jpg'
 import _puffin2_outsidehomes from './assets/puffin2-outsidehomes.jpg'
 import _spiritedAwayNightScene from './assets/spiritedAwayNightScene.jpg'
 import _warofworldswordcloud from './assets/warofworldswordcloud.png'
-export const Gallery = [{
+export const ClickDisplay = [{
     id: 0,
     name: 'bagpipes',
     kind: 'music',
