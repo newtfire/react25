@@ -1,4 +1,3 @@
-import {useState} from "react";
 import {BrowserRouter, Routes, Route, NavLink, Link} from 'react-router-dom'
 import styled from 'styled-components'
 /* ebb: I had to npm install styled-components for this. Thinking about how it's different
@@ -15,7 +14,6 @@ revealed.
  */
 function App() {
 
-
 const StyledLink = styled(NavLink)`
   color: lavenderblush;
     padding-right: 2em;
@@ -26,14 +24,15 @@ const StyledLink = styled(NavLink)`
 
   return (
     <>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <nav>
-                <StyledLink to={"/react25/"}>Home</StyledLink>
-                <StyledLink to={"/react25/gallery"}>Gallery</StyledLink>
+                <StyledLink to={"/"}>Home</StyledLink>
+                <StyledLink to={"/gallery"}>Gallery</StyledLink>
             </nav>
             <Routes>
-                <Route path={"/react25/"} element={<Home />}>Home</Route>
-                <Route path={"/react25/gallery"} element={<Gallery />} />
+                <Route path={"/"} element={<Home />}>Home</Route>
+                <Route path={"/gallery"} element={<Gallery />} />
+
             </Routes>
         </BrowserRouter>
 
