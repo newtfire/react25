@@ -64,4 +64,4 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     &.active {
         font-weight: bold;
         color: yellowgreen;
-    }`;return tt.jsx(tt.Fragment,{children:tt.jsxs(s1,{children:[tt.jsxs("nav",{children:[tt.jsx(i,{to:"/react25/",children:"Home"}),tt.jsx(i,{to:"/react25/gallery",children:"Gallery"})]}),tt.jsxs(wg,{children:[tt.jsx(Dr,{path:"/react25/",element:tt.jsx(qp,{}),children:"Home"}),tt.jsx(Dr,{path:"/react25/gallery",element:tt.jsx(Gp,{})})]})]})})}Fv.createRoot(document.getElementById("root")).render(tt.jsx(N.StrictMode,{children:tt.jsx(Xp,{})}));
+    }`;return tt.jsx(tt.Fragment,{children:tt.jsxs(s1,{basename:"/react25/",children:[tt.jsxs("nav",{children:[tt.jsx(i,{to:"/",children:"Home"}),tt.jsx(i,{to:"/gallery",children:"Gallery"})]}),tt.jsxs(wg,{children:[tt.jsx(Dr,{path:"/",element:tt.jsx(qp,{}),children:"Home"}),tt.jsx(Dr,{path:"/gallery",element:tt.jsx(Gp,{})})]})]})})}Fv.createRoot(document.getElementById("root")).render(tt.jsx(N.StrictMode,{children:tt.jsx(Xp,{})}));
