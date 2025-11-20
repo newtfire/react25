@@ -25,6 +25,8 @@ const StyledLink = styled(NavLink)`
   return (
     <>
         <BrowserRouter basename={import.meta.env.BASE_URL}>
+            {/*ebb: By adding this basename, I am now pulling in
+            the base variable from vite.config.js */}
             <nav>
                 <StyledLink to={"/"}>Home</StyledLink>
                 <StyledLink to={"/gallery"}>Gallery</StyledLink>
